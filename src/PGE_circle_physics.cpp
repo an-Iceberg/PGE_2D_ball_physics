@@ -187,11 +187,13 @@ public:
   {
     Clear(olc::VERY_DARK_CYAN);
 
+    // Draw all the balls
     for (auto const& ball : balls)
     {
       DrawCircle(ball.position, ball.radius);
     }
 
+    // Draw a line from the selected ball to the mouse, indicating the direction it will be launched in
     if(selectedBall != nullptr)
     {
       DrawLine(selectedBall->position, mouse, olc::Pixel(255, 128, 0));
